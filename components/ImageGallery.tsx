@@ -22,13 +22,13 @@ export default function ImageGallery({
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative aspect-video overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700"
+            className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-4"
           >
             <Image
               src={image}
               alt={`${projectTitle} - Image ${index + 1}`}
               fill
-              className="object-cover transition-transform duration-300 hover:scale-110 cursor-pointer"
+              className="object-contain transition-transform duration-300 hover:scale-105 cursor-pointer p-2"
             />
           </div>
         ))}

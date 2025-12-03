@@ -51,6 +51,13 @@ The results from LDHelmet showed 14 regions that show evidence of recombination,
     technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
     githubUrl: 'https://github.com/AlexanderFastner/Alternaria-Solani-Recombination',
     image: '/images/alternaria_solani.jpg',
+    images: [
+      '/images/alternaria_solani.jpg',
+      '/images/bachelor_map.png',
+      '/images/bachelor_chr1_clonalframeml.png',
+      '/images/bachelor_chr7_LDhelmet.png',
+      '/images/bachelor_chr1_comparison.png',
+    ],
     featured: true,
   },
   {
@@ -72,6 +79,11 @@ The general strategy for generating β cells from human pluripotent stem cells (
     technologies: ['Python', 'R', 'RNA-seq', 'Bioinformatics', 'Differential Expression Analysis', 'Pathway Analysis', 'Bioconductor'],
     githubUrl: 'https://github.com/AlexanderFastner/MAFA_functional_analysis',
     image: '/images/hpsc_progression.png',
+    images: [
+      '/images/hpsc_progression.png',
+      '/images/master_dataflow.png',
+      '/images/master_gsis.png',
+    ],
     featured: true,
   },
   {
@@ -89,6 +101,12 @@ Different visualizations are generated to show differences between transcriptome
     githubUrl: 'https://github.com/AlexanderFastner/cantata_frontend',
     liveUrl: 'https://cantatadb-8f2293883fc5.herokuapp.com/',
     image: '/images/cantata_heatmap.png',
+    images: [
+      '/images/cantata_heatmap.png',
+      '/images/cantata_stacked_area.png',
+      '/images/cantata_raincloud.png',
+      '/images/cantata_alignment.png',
+    ],
   },
   {
     slug: 'cyclistic-case-study',
@@ -111,6 +129,13 @@ The insights gathered from this comprehensive analysis provide a solid foundatio
     technologies: ['R', 'Data Analysis', 'Data Visualization', 'Statistical Analysis', 'ggplot2'],
     githubUrl: 'https://github.com/AlexanderFastner/Cyclystic_Case_Study',
     image: '/images/Cyclistic_logo.png',
+    images: [
+      '/images/Cyclistic_logo.png',
+      '/images/cyclistic_compared_stacked_bar.png',
+      '/images/cyclistic_comparative_daily_usage.png',
+      '/images/cyclistic_ride_duration_distribution.png',
+      '/images/cyclistic_monthly_usage.png',
+    ],
   },
   {
     slug: 'dysregnetweb',
@@ -128,6 +153,12 @@ After selecting a cancer and target genes a network is shown with the levels of 
     technologies: ['Python', 'Neo4j', 'Web Development', 'Bioinformatics', 'Network Analysis'],
     liveUrl: 'https://exbio.wzw.tum.de/dysregnet/',
     image: '/images/dysregnet_1.png',
+    images: [
+      '/images/dysregnet_1.png',
+      '/images/dysregnet_2.png',
+      '/images/dysregnet_3.png',
+      '/images/dysregnet_4.png',
+    ],
   },
   {
     slug: 'protein-embeddings-phylogenies',
@@ -147,6 +178,12 @@ We first try to establish that there is information contained in the dataset at 
 In the end we find that the protein embeddings alone with minimal training, even without additional dimensionality reduction were substantial support for building trees.`,
     technologies: ['Python', 'Machine Learning', 'VAE', 'Bioinformatics', 'Phylogenetics', 'Protein Analysis'],
     image: '/images/protein_embeddings_trees.png',
+    images: [
+      '/images/protein_embeddings_trees.png',
+      '/images/protein_embeddings_general_structure.png',
+      '/images/protein_embeddings_parameters.png',
+      '/images/protein_embeddings_distances.png',
+    ],
   },
   {
     slug: 'machine-strike',

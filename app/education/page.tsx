@@ -1,3 +1,6 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 export const metadata = {
   title: "Education | Portfolio",
   description: "Educational background and academic research",
@@ -24,6 +27,13 @@ export default function EducationPage() {
             </p>
             <div className="space-y-3">
               <div className="flex flex-wrap items-center gap-3">
+                <Image
+                  src="/images/TUM_Logo_PNG.png"
+                  alt="TUM Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
                 <a
                   href="https://www.tum.de/en/"
                   target="_blank"
@@ -34,6 +44,13 @@ export default function EducationPage() {
                 </a>
               </div>
               <div className="flex flex-wrap items-center gap-3">
+                <Image
+                  src="/images/LMU_Logo_PNG.png"
+                  alt="LMU Logo"
+                  width={40}
+                  height={40}
+                  className="h-10 w-auto object-contain"
+                />
                 <a
                   href="https://www.lmu.de/en/"
                   target="_blank"
@@ -47,9 +64,17 @@ export default function EducationPage() {
           </section>
 
           <section className="border-t border-gray-200 dark:border-gray-700 pt-8">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Bioinformatics Master (TUM/LMU + Helmholtz Institute)
-            </h2>
+            <div className="flex items-center gap-3 mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                Bioinformatics Master (TUM/LMU + Helmholtz Institute)
+              </h2>
+              <Link
+                href="/projects/masters-thesis"
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm transition-colors"
+              >
+                View Project →
+              </Link>
+            </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Bioinformatic Analysis of the role of MAFA in Stem Cell-Derived
               Human Pancreatic Islets
@@ -78,9 +103,17 @@ export default function EducationPage() {
           </section>
 
           <section className="border-t border-gray-200 dark:border-gray-700 pt-8">
-            <h2 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-              Bioinformatics Bachelor (TUM/LMU)
-            </h2>
+            <div className="flex items-center gap-3 mb-4">
+              <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
+                Bioinformatics Bachelor (TUM/LMU)
+              </h2>
+              <Link
+                href="/projects/bachelors-thesis"
+                className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-medium text-sm transition-colors"
+              >
+                View Project →
+              </Link>
+            </div>
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
               Search for evidence of recombination in Alternaria solani using
               genomic tools

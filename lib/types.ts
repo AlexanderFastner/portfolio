@@ -5,6 +5,7 @@ export interface Project {
   description: string;
   longDescription?: string;
   image?: string;
+  images?: string[]; // Additional images for gallery
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;

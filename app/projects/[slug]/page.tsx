@@ -41,9 +41,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     notFound();
   }
 
-  // For now, we'll use a single image or placeholder
-  // You can extend the Project type to include an images array
-  const projectImages = project.image ? [project.image] : [];
+  // Use images array if available, otherwise fall back to single image
+  const projectImages = project.images || (project.image ? [project.image] : []);
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
@@ -88,12 +87,12 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         {/* Project Image */}
         {project.image ? (
-          <div className="relative mb-8 aspect-video w-full overflow-hidden rounded-lg bg-gray-200 dark:bg-gray-700">
+          <div className="relative mb-8 aspect-video w-full overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-8">
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover"
+              className="object-contain p-4"
               priority
             />
           </div>

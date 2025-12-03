@@ -14,12 +14,12 @@ export default function ProjectCard({ project }: ProjectCardProps) {
     >
       {/* Project Image */}
       {project.image ? (
-        <div className="relative h-48 w-full overflow-hidden bg-gray-200 dark:bg-gray-700">
+        <div className="relative h-56 w-full overflow-hidden bg-gray-100 dark:bg-gray-800 flex items-center justify-center p-4">
           <Image
             src={project.image}
             alt={project.title}
             fill
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            className="object-contain transition-transform duration-300 group-hover:scale-105 p-2"
           />
         </div>
       ) : (
