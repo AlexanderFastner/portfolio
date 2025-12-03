@@ -10,7 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all hover:shadow-lg dark:bg-gray-800"
+      className="group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800"
     >
       {/* Project Image */}
       {project.image ? (
@@ -68,7 +68,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
         {/* Links */}
         <div className="mt-4 flex items-center gap-4 text-sm">
-          <span className="font-medium text-blue-600 group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300">
+          <span className="font-medium text-blue-600 transition-colors group-hover:text-blue-700 dark:text-blue-400 dark:group-hover:text-blue-300">
             View details →
           </span>
         </div>

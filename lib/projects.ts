@@ -1,5 +1,15 @@
 import { Project } from './types';
 
+// Helper function to get a project by slug
+export function getProjectBySlug(slug: string): Project | undefined {
+  return projects.find((project) => project.slug === slug);
+}
+
+// Helper function to get all project slugs (for static generation)
+export function getAllProjectSlugs(): string[] {
+  return projects.map((project) => project.slug);
+}
+
 // Sample projects data - replace with your actual projects
 export const projects: Project[] = [
   {

@@ -15,15 +15,15 @@ export default function Home() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/projects"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-500 hover:shadow-md hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               View Projects
             </a>
             <a
               href="#about"
-              className="text-sm font-semibold leading-6 text-gray-900 dark:text-white"
+              className="group text-sm font-semibold leading-6 text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
             >
-              Learn more <span aria-hidden="true">→</span>
+              Learn more <span aria-hidden="true" className="inline-block transition-transform duration-200 group-hover:translate-x-1">→</span>
             </a>
           </div>
         </div>
@@ -69,7 +69,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {/* Skills Categories */}
-              <div className="rounded-lg bg-white p-6 shadow-sm dark:bg-gray-900">
+              <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:bg-gray-900">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Frontend
                 </h3>
@@ -81,7 +81,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="rounded-lg bg-white p-6 shadow-sm dark:bg-gray-900">
+              <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:bg-gray-900">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Backend
                 </h3>
@@ -93,7 +93,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="rounded-lg bg-white p-6 shadow-sm dark:bg-gray-900">
+              <div className="rounded-lg bg-white p-6 shadow-sm transition-shadow duration-300 hover:shadow-md dark:bg-gray-900">
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                   Tools & Others
                 </h3>
