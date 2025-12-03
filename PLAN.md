@@ -199,15 +199,6 @@ Migrate your Python Dash personal website to a modern Next.js static site hosted
 
 ### Initial Setup
 ```bash
-# Create Next.js project
-npx create-next-app@latest portfolio --typescript --tailwind --app --no-src-dir
-
-# Navigate to project
-cd portfolio
-
-# Install Firebase CLI (if not already installed)
-npm install -g firebase-tools
-
 # Login to Firebase
 firebase login
 
@@ -237,13 +228,3 @@ npx serve out
 npm run build
 firebase deploy --only hosting
 ```
-
-## Notes
-
-- The plan assumes you'll create the project in a separate directory from your Flutter game
-- Tailwind CSS is recommended for simplicity and performance
-- All pages will be statically generated at build time
-- Images should be placed in `public/images/` directory
-- Project data can be stored in JSON files or TypeScript data files
-- The site will be fully static, so no server-side rendering at runtime
-

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -10,6 +11,7 @@ export default function Navigation() {
 
   const navLinks = [
     { href: '/', label: 'About' },
+    { href: '/education', label: 'Education' },
     { href: '/projects', label: 'Projects' },
   ];
 
@@ -27,9 +29,25 @@ export default function Navigation() {
           {/* Logo/Brand */}
           <Link
             href="/"
-            className="text-xl font-bold text-gray-900 transition-colors hover:text-gray-700 dark:text-white dark:hover:text-gray-300"
+            className="flex items-center gap-3 text-xl font-bold text-gray-900 transition-colors hover:text-gray-700 dark:text-white dark:hover:text-gray-300"
           >
-            Portfolio
+            <Image
+              src="/images/DNA_graphic.png"
+              alt="DNA logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-contain"
+              priority
+            />
+            <span>Alexander Fastner</span>
+            <Image
+              src="/images/DNA_graphic.png"
+              alt="DNA logo"
+              width={40}
+              height={40}
+              className="h-10 w-10 rounded-full object-contain"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}
