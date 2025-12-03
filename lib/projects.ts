@@ -21,8 +21,8 @@ export const projects: Project[] = [
       `Rosalind is a platform for learning Bioinformatics by working through a collection of problems. I've been working through various challenges covering topics like alignment, combinatorics, computational mass spectrometry, divide and conquer, dynamic programming, genomic assembly, graph algorithms, phylogeny, and string algorithms.
 
 Some examples of challenges I've completed include:
-- **SGRA**: Using the Spectrum Graph to Infer Peptides - transforming a list of positive real numbers corresponding to the spectrum graph of a protein sequence into the longest protein string that matches the spectrum graph.
-- **NKEW**: Newick Format with Edge Weights - receiving a weighted newick tree and returning a collection of numbers that represents the distances between the nodes.
+- SGRA: Using the Spectrum Graph to Infer Peptides - transforming a list of positive real numbers corresponding to the spectrum graph of a protein sequence into the longest protein string that matches the spectrum graph.
+- NKEW: Newick Format with Edge Weights - receiving a weighted newick tree and returning a collection of numbers that represents the distances between the nodes.
 
 The project covers many bioinformatics topics including Alignment, Combinatorics, Computational Mass Spectrometry, Divide and Conquer, Dynamic Programming, Genomic Assembly, Genome Rearrangements, Graph Algorithms, Graphs, Heredity, Phylogeny, Population Dynamics, Probability, Set Theory, Sorting, and String Algorithms.`,
     technologies: ['Python', 'Bioinformatics', 'Algorithm Design', 'Data Structures'],
@@ -43,9 +43,11 @@ Fungicides, particularly succinate dehydrogenase inhibitors (SDHIs), are commonl
 
 To investigate this, I analyzed 48 A. solani samples from various European regions and the United States using recombination detection tools ClonalFrameML and LDHelmet. These tools help assess whether genetic exchange occurs, which is important for designing robust, cost-effective integrated pest management strategies. Understanding the pathogen's reproductive biology can inform how we approach disease control, especially as resistance to chemical controls grows.
 
-**ClonalFrameML** is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
+ClonalFrameML:
+ClonalFrameML is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
 
-**LDHelmet** is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
+LDHelmet:
+LDHelmet is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
 
 The results from LDHelmet showed 14 regions that show evidence of recombination, many of which upon visual inspection line up with results from ClonalFrameML. This work was continued as a research assistant for Prof. Stam at the Phytopathology chair at TUM and also later at Kiel University.`,
     technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
@@ -68,7 +70,7 @@ The results from LDHelmet showed 14 regions that show evidence of recombination,
     longDescription:
       `This project is a collaboration between the Theis Lab at the Helmholtz Institute of Munich and Hebrok Lab at Technical University of Munich (TUM).
 
-**Abstract:**
+Abstract:
 Type 1 diabetes (T1D) is an autoimmune disorder characterized by immune-mediated destruction of insulin-producing pancreatic β-cells, leading to lifelong dependence on exogenous insulin. Current stem cell-based therapies aim to restore endogenous insulin production by generating functional β-cells from pluripotent stem cells, though challenges remain in achieving functional maturity comparable to primary β-cells.
 
 The transcription factor MAFA plays a pivotal role in maintaining β-cell identity and regulating insulin production, with human β-cells showing developmental-stage-specific MAFA expression patterns – low activity in juvenile cells and higher expression in mature adult cells. A naturally occurring MAFAS64F mutation initially enhances insulin production through elevated MAFA activity, but this effect proves transient, highlighting MAFA's dual role in promoting β-cell function and its susceptibility to instability.
@@ -94,10 +96,10 @@ The general strategy for generating β cells from human pluripotent stem cells (
     longDescription:
       `CANTATA is a Community-based Non-bilaterian Transcriptome Archive. The aim of this project is to provide an archive of non-bilaterian transcriptomic resources assembled and annotated in a standardized manner. It is intended to serve as a resource for Biologists to analyze and interpret their sequencing data for aquatic life.
 
-I solo developed this web tool and built it with Python Dash, containerized as a Docker image, and hosted on Heroku. It allows a user to compare their aquatic specimens BUSCO genes (Benchmarking Universal Single-Copy Orthologs) to our dataset. These genes are selected because they are expected to be found in at least 90% of species in a lineage, and in a single copy in 90% of those species. BUSCO genes serve as a standard set of markers for assessing the completeness and quality of genome assemblies, gene sets, and transcriptomes.
+I solo developed this web tool and built it with Python Dash, containerized as a Docker image, and originally hosted on Heroku (Now Google CLoud Run). It allows a user to compare their aquatic specimens BUSCO genes (Benchmarking Universal Single-Copy Orthologs) to our dataset. These genes are selected because they are expected to be found in at least 90% of species in a lineage, and in a single copy in 90% of those species. BUSCO genes serve as a standard set of markers for assessing the completeness and quality of genome assemblies, gene sets, and transcriptomes.
 
 Different visualizations are generated to show differences between transcriptomes as well as the biases introduced by different assembly programs (Trinity, TransPi). TransPi is an assembly made by combining results from several other assemblers with stringent filtering criteria.`,
-    technologies: ['Python', 'Dash', 'Docker', 'Heroku', 'Bioinformatics', 'Data Visualization'],
+    technologies: ['Python', 'Dash', 'Docker', 'Heroku', 'Bioinformatics', 'Data Visualization', 'Google Cloud Platform'],
     githubUrl: 'https://github.com/AlexanderFastner/cantata_frontend',
     liveUrl: 'https://cantatadb-8f2293883fc5.herokuapp.com/',
     image: '/images/cantata_heatmap.png',
@@ -118,13 +120,13 @@ Different visualizations are generated to show differences between transcriptome
 
 Through meticulous data analysis this study unveils key findings that can reshape the company's operational and marketing strategies:
 
-**Uncovering User Behavior Patterns:**
+Uncovering User Behavior Patterns:
 The study delves deep into the user data, identifying distinct patterns and trends in how customers interact with the Cyclistic platform. This includes understanding the preferences and usage habits of both casual and annual members.
 
-**Identifying Conversion Opportunities:**
+Identifying Conversion Opportunities:
 By analyzing the factors that drive user engagement and loyalty, the study pinpoints the most promising opportunities for converting casual riders into subscribing members. This information can inform targeted marketing campaigns and product enhancements to better meet the needs of the target audience.
 
-**Informing Strategic Decision-Making:**
+Informing Strategic Decision-Making:
 The insights gathered from this comprehensive analysis provide a solid foundation for Cyclistic to make data-driven decisions. This can lead to the development of more effective operational and marketing strategies, strengthening the company's position in the competitive rideshare market.`,
     technologies: ['R', 'Data Analysis', 'Data Visualization', 'Statistical Analysis', 'ggplot2'],
     githubUrl: 'https://github.com/AlexanderFastner/Cyclystic_Case_Study',
@@ -145,10 +147,10 @@ The insights gathered from this comprehensive analysis provide a solid foundatio
     longDescription:
       `Gene regulation is frequently altered in diseases in unique and patient-specific ways. Hence, personalised strategies have been proposed to infer patient-specific gene-regulatory networks. However, existing methods do not scale well because they often require recomputing the entire network per sample. Moreover, they do not account for clinically important confounding factors such as age, sex or treatment history. Finally, a user-friendly implementation for the analysis and interpretation of such networks is missing.
 
-**DysRegNetWeb:**
+DysRegNetWeb:
 We built a web interface for the pre-existing DysRegNet to allow users to easily check for dysregulation of specific genes and compare to GTEx tissue data. The constructed biological network information is contained in a neo4j graphical database and displayed in an intuitive way.
 
-**Use:**
+Use:
 After selecting a cancer and target genes a network is shown with the levels of dysregulation shown as red percentages on the arrows connecting them. This can then be filtered and compared to the regulation in other cancer types. Additional parameter sliders are available for adjusting what to display.`,
     technologies: ['Python', 'Neo4j', 'Web Development', 'Bioinformatics', 'Network Analysis'],
     liveUrl: 'https://exbio.wzw.tum.de/dysregnet/',
@@ -170,11 +172,11 @@ After selecting a cancer and target genes a network is shown with the levels of 
 
 Although MSAs are currently the most reliable way to create trees, it is a very time consuming method. In order to reduce time, we used protein sequence embeddings to cluster them without doing MSAs first.
 
-**TLDR**: We take a vector representation of a protein sequence, calculate how different it is from others, and build a tree with those relationships and evaluate.
+TLDR: We take a vector representation of a protein sequence, calculate how different it is from others, and build a tree with those relationships and evaluate.
 
 We first try to establish that there is information contained in the dataset at all. Then we use dimensionality reduction to try and filter only those dimensions that contain the most information and hopefully reduce the noise. To this end we use a VAE (Variational Autoencoder). We tested various distance metrics, clustering algorithms and activation functions and hidden layer depths. In the end we find that the training needed is minimal and that further epochs end up making worse trees.
 
-**Result:**
+Result:
 In the end we find that the protein embeddings alone with minimal training, even without additional dimensionality reduction were substantial support for building trees.`,
     technologies: ['Python', 'Machine Learning', 'VAE', 'Bioinformatics', 'Phylogenetics', 'Protein Analysis'],
     image: '/images/protein_embeddings_trees.png',
@@ -230,6 +232,33 @@ In the end we find that the protein embeddings alone with minimal training, even
     longDescription:
       `SpongeDB v2 is an updated version of a database project. This project involves building and improving upon database functionality, query systems, and data management capabilities. The version 2 indicates significant improvements and new features over the original implementation.`,
     technologies: ['Database', 'Data Management', 'Backend Development'],
+  },
+  {
+    slug: 'neon-escape',
+    title: 'Neon Escape',
+    description:
+      'A Flutter-based mobile game inspired by Two Cars, featuring a neon-themed endless runner where players control two cars simultaneously to avoid obstacles and collect power-ups.',
+    longDescription:
+      `Neon Escape is a cross-platform mobile game built with Flutter, inspired by the classic Two Cars game. The game features a sleek neon-themed aesthetic with smooth gameplay mechanics.
+
+Gameplay:
+Players control two cars simultaneously - one on the left side and one on the right side of the screen. The objective is to navigate through obstacles by switching lanes, collecting power-ups (stars), and achieving the highest score possible. The game includes multiple difficulty levels and tracks high scores locally.
+
+Features:
+- Dual car control system with lane switching
+- Multiple difficulty levels
+- Power-up collection system with immunity effects
+- High score tracking with persistent storage
+- Settings management with theme support
+- Cross-platform support (Android, iOS, Web, Windows, Linux, macOS)
+- Firebase Hosting deployment for web version
+
+Technical Implementation:
+The game is built using Flutter and Dart, with a clean architecture separating screens, services, and widgets. It uses SharedPreferences for local data persistence, includes a theme service for customizable appearance, and features smooth animations using Flutter's animation controllers. The project structure follows Flutter best practices with organized screens, services, and reusable widgets.
+
+The game can be deployed to multiple platforms, with Firebase Hosting configured for web deployment.`,
+    technologies: ['Flutter', 'Dart', 'Mobile Development', 'Game Development', 'Firebase', 'Cross-platform'],
+    image: '/images/neon_escape_icon.png',
   },
 ];
 

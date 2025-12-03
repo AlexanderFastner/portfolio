@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { getProjectBySlug, getAllProjectSlugs } from '@/lib/projects';
 import ImageGallery from '@/components/ImageGallery';
+import ProjectStructure from '@/components/ProjectStructure';
 
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
@@ -109,8 +110,60 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Project Writeup/Content */}
         <div className="prose prose-lg dark:prose-invert max-w-none mb-8">
           {project.longDescription ? (
-            <div className="space-y-4 text-gray-700 dark:text-gray-300">
-              <p className="text-lg leading-8">{project.longDescription}</p>
+            <div className="space-y-6 text-gray-700 dark:text-gray-300">
+              {project.longDescription.split('\n\n').map((paragraph, index) => {
+                // Check if this is a heading (ends with colon and next line starts with bullet or dash)
+                const isHeading = paragraph.includes(':') && !paragraph.includes('\n-') && paragraph.split(':').length === 2;
+                const [heading, ...rest] = paragraph.split(':');
+                
+                if (isHeading && rest.length > 0) {
+                  return (
+                    <div key={index} className="space-y-2">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">
+                        {heading.trim()}
+                      </h3>
+                      <div className="text-lg leading-8 whitespace-pre-line">
+                        {rest.join(':').trim()}
+                      </div>
+                    </div>
+                  );
+                }
+                
+                // Check if it's a bullet list
+                if (paragraph.includes('\n-')) {
+                  const lines = paragraph.split('\n');
+                  const listItems = lines.filter(line => line.trim().startsWith('-'));
+                  const beforeList = lines.filter(line => !line.trim().startsWith('-')).join('\n');
+                  
+                  return (
+                    <div key={index} className="space-y-2">
+                      {beforeList && (
+                        <p className="text-lg leading-8">{beforeList.trim()}</p>
+                      )}
+                      <ul className="list-disc list-inside space-y-1 text-lg leading-8 ml-4">
+                        {listItems.map((item, itemIndex) => (
+                          <li key={itemIndex}>{item.trim().substring(1).trim()}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  );
+                }
+                
+                // Regular paragraph
+                return (
+                  <p key={index} className="text-lg leading-8 whitespace-pre-line">
+                    {paragraph}
+                  </p>
+                );
+              })}
+              {project.slug === 'neon-escape' && (
+                <div className="mt-8">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
+                    Project Structure
+                  </h3>
+                  <ProjectStructure />
+                </div>
+              )}
             </div>
           ) : (
             <div className="space-y-4 text-gray-700 dark:text-gray-300">
