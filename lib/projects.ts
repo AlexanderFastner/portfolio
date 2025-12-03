@@ -260,5 +260,34 @@ The game can be deployed to multiple platforms, with Firebase Hosting configured
     technologies: ['Flutter', 'Dart', 'Mobile Development', 'Game Development', 'Firebase', 'Cross-platform'],
     image: '/images/neon_escape_icon.png',
   },
+  {
+    slug: '3d-printing',
+    title: '3D Printing Projects',
+    description:
+      'A collection of 3D printing projects showcasing various designs, from functional parts to creative models, demonstrating skills in CAD design and additive manufacturing.',
+    longDescription:
+      `This collection features various 3D printing projects I've worked on, ranging from functional parts to creative designs. Each project demonstrates different aspects of 3D printing, including CAD design, material selection, and post-processing techniques.
+
+Project 1:
+[Placeholder description for first 3D printing project]
+
+Project 2:
+[Placeholder description for second 3D printing project]
+
+Project 3:
+[Placeholder description for third 3D printing project]
+
+Project 4:
+[Placeholder description for fourth 3D printing project]`,
+    technologies: ['3D Printing', 'CAD Design', 'Additive Manufacturing', 'Product Design'],
+    image: '/images/3d_printing_placeholder.png',
+    images: [
+      '/images/3d_printing_placeholder.png',
+      '/images/3d_printing_project1_placeholder.png',
+      '/images/3d_printing_project2_placeholder.png',
+      '/images/3d_printing_project3_placeholder.png',
+      '/images/3d_printing_project4_placeholder.png',
+    ],
+  },
 ];
 
