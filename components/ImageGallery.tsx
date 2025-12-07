@@ -29,6 +29,9 @@ export default function ImageGallery({
               alt={`${projectTitle} - Image ${index + 1}`}
               fill
               className="object-contain transition-transform duration-300 hover:scale-105 cursor-pointer p-2"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              quality={85}
+              loading={index < 3 ? 'eager' : 'lazy'}
             />
           </div>
         ))}

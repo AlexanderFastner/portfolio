@@ -28,9 +28,33 @@ export async function generateMetadata({ params }: ProjectPageProps) {
     };
   }
 
+  const imageUrl = project.image 
+    ? `/images/${project.image}`
+    : '/images/profile_picture.png';
+
   return {
-    title: `${project.title} | Portfolio`,
+    title: project.title,
     description: project.description,
+    openGraph: {
+      title: `${project.title} | Alexander Fastner`,
+      description: project.description,
+      url: `https://portfolio-3fef6.web.app/projects/${slug}`,
+      type: 'website',
+      images: [
+        {
+          url: imageUrl,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: project.title,
+      description: project.description,
+      images: [imageUrl],
+    },
   };
 }
 
@@ -51,6 +75,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         {/* Back Button */}
         <Link
           href="/projects"
+          prefetch={true}
           className="mb-8 inline-flex items-center text-sm font-medium text-gray-600 transition-colors hover:text-gray-900 dark:text-gray-400 dark:hover:text-white"
         >
           <svg
@@ -95,6 +120,8 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               fill
               className="object-contain p-4"
               priority
+              quality={90}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
             />
           </div>
         ) : (

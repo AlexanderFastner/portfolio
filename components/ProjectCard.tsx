@@ -10,6 +10,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <Link
       href={`/projects/${project.slug}`}
+      prefetch={true}
       className="group relative flex flex-col overflow-hidden rounded-lg bg-white shadow-sm transition-all duration-300 hover:shadow-xl hover:-translate-y-1 dark:bg-gray-800"
     >
       {/* Project Image */}
@@ -20,6 +21,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             alt={project.title}
             fill
             className="object-contain transition-transform duration-300 group-hover:scale-105 p-2"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            quality={85}
           />
         </div>
       ) : (

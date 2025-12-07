@@ -1,4 +1,24 @@
 import Image from 'next/image';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "About",
+  description: "Learn about Alexander Fastner - a bioinformatics researcher and software developer passionate about building innovative solutions at the intersection of coding and biology.",
+  openGraph: {
+    title: "About | Alexander Fastner",
+    description: "Learn about Alexander Fastner - a bioinformatics researcher and software developer passionate about building innovative solutions.",
+    url: "https://portfolio-3fef6.web.app",
+    images: [
+      {
+        url: "/images/profile_picture.png",
+        width: 1200,
+        height: 630,
+        alt: "Alexander Fastner",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
@@ -17,12 +37,13 @@ export default function Home() {
             showcasing my passion for creating innovative solutions.
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <a
+            <Link
               href="/projects"
+              prefetch={true}
               className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-blue-500 hover:shadow-md hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
             >
               View Projects
-            </a>
+            </Link>
             <a
               href="#about"
               className="group text-sm font-semibold leading-6 text-gray-900 transition-colors hover:text-blue-600 dark:text-white dark:hover:text-blue-400"
@@ -86,12 +107,13 @@ export default function Home() {
                 <p className="text-lg leading-8 text-gray-600 dark:text-gray-400">
                   Want to learn more about my academic background and research?
                   Check out the{" "}
-                  <a
+                  <Link
                     href="/education"
+                    prefetch={true}
                     className="text-blue-600 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 font-semibold"
                   >
                     Education
-                  </a>{" "}
+                  </Link>{" "}
                   page for details about my Bioinformatics Bachelor&apos;s and
                   Master&apos;s work.
                 </p>
@@ -110,6 +132,8 @@ export default function Home() {
                       height={300}
                       className="rounded-lg w-full h-auto"
                       priority
+                      quality={90}
+                      sizes="(max-width: 1024px) 100vw, 300px"
                     />
                   </div>
                   <div className="space-y-4">

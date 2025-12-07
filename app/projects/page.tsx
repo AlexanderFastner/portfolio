@@ -1,9 +1,15 @@
 import { projects } from '@/lib/projects';
 import ProjectCard from '@/components/ProjectCard';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: 'Projects | Portfolio',
-  description: 'A collection of my projects and work',
+export const metadata: Metadata = {
+  title: 'Projects',
+  description: 'Explore a collection of projects by Alexander Fastner including bioinformatics tools, web applications, data analysis, and software development projects.',
+  openGraph: {
+    title: 'Projects | Alexander Fastner',
+    description: 'Explore a collection of projects including bioinformatics tools, web applications, and software development.',
+    url: 'https://portfolio-3fef6.web.app/projects',
+  },
 };
 
 export default function ProjectsPage() {

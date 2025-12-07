@@ -1,9 +1,15 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import type { Metadata } from 'next';
 
-export const metadata = {
-  title: "Education | Portfolio",
-  description: "Educational background and academic research",
+export const metadata: Metadata = {
+  title: "Education",
+  description: "Educational background of Alexander Fastner - Master's in Bioinformatics from TUM, Bachelor's in Biology from LMU, and academic research publications.",
+  openGraph: {
+    title: "Education | Alexander Fastner",
+    description: "Educational background and academic research of Alexander Fastner.",
+    url: "https://portfolio-3fef6.web.app/education",
+  },
 };
 
 export default function EducationPage() {
@@ -33,6 +39,7 @@ export default function EducationPage() {
                   width={40}
                   height={40}
                   className="h-10 w-auto object-contain"
+                  quality={85}
                 />
                 <a
                   href="https://www.tum.de/en/"
@@ -50,6 +57,7 @@ export default function EducationPage() {
                   width={40}
                   height={40}
                   className="h-10 w-auto object-contain"
+                  quality={85}
                 />
                 <a
                   href="https://www.lmu.de/en/"

@@ -30,6 +30,7 @@ export default function Navigation() {
           <Link
             href="/"
             className="flex items-center gap-3 text-xl font-bold text-gray-900 transition-colors hover:text-gray-700 dark:text-white dark:hover:text-gray-300"
+            prefetch={true}
           >
             <Image
               src="/images/DNA_graphic.png"
@@ -38,16 +39,9 @@ export default function Navigation() {
               height={40}
               className="h-10 w-10 rounded-full object-contain"
               priority
+              quality={90}
             />
             <span>Alexander Fastner</span>
-            <Image
-              src="/images/DNA_graphic.png"
-              alt="DNA logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 rounded-full object-contain"
-              priority
-            />
           </Link>
 
           {/* Desktop Navigation */}
@@ -56,6 +50,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 className={`px-3 py-2 text-sm font-medium transition-colors ${
                   isActive(link.href)
                     ? 'text-gray-900 dark:text-white border-b-2 border-gray-900 dark:border-white'
@@ -119,6 +114,7 @@ export default function Navigation() {
               <Link
                 key={link.href}
                 href={link.href}
+                prefetch={true}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={`block rounded-md px-3 py-2 text-base font-medium transition-colors ${
                   isActive(link.href)
