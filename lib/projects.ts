@@ -201,10 +201,17 @@ In the end we find that the protein embeddings alone with minimal training, even
     slug: 'arduino-volume-control',
     title: 'Arduino Physical Volume Control',
     description:
-      'A custom physical volume control for PC built with Arduino, involving soldering and embedded programming to create a hardware interface for system audio control.',
+      'A 3d-printed and soldered, physical volume control for PC that is controlled by an Arduino running the open source software Deej.',
     longDescription:
-      `One aspect of programming that has always interested me, but never came up in my studies, was embedded Programming. I've recently enjoyed learning soldering and tinkering with an Arduino board to create a custom physical volume control for my PC. This project combines hardware and software development, allowing me to explore embedded systems and physical computing.`,
-    technologies: ['Arduino', 'C++', 'Embedded Systems', 'Hardware', 'Electronics'],
+      `This project details the development of a custom, tactile volume control for my PC using an Arduino. I designed and constructed the hardware, including soldering the necessary components and designing a custom enclosure. The Arduino software reads input from a rotary potentiometer and uses serial communication to control the system volume on my computer. I utilized software from the open source project Deej to achieve this. This project provided valuable experience in 3d Printing and Soldering.`,
+    deejUrl: 'https://github.com/omriharel/deej',
+    technologies: ['Arduino', 'Soldering', '3D Printing', 'Hardware', 'Electronics', 'Deej'],
+    image: '/images/final_controls.png',
+    images: [
+      '/images/soldering.png',
+      '/images/assembly.png',
+      '/images/final_controls.png',
+    ],
   },
   {
     slug: 'raspberry-pi-web-hosting',
@@ -269,7 +276,7 @@ The game can be deployed to multiple platforms, with Firebase Hosting configured
       `This collection features various 3D printing projects I've worked on, ranging from functional parts to creative designs. Each project demonstrates different aspects of 3D printing, including CAD design, material selection, and post-processing techniques.
 
 Project 1:
-[Placeholder description for first 3D printing project]
+A custom 3D-printed enclosure for the [Arduino Physical Volume Control](/projects/arduino-volume-control) project, designed to house the electronics and provide a professional finish.
 
 Project 2:
 [Placeholder description for second 3D printing project]
@@ -280,13 +287,14 @@ Project 3:
 Project 4:
 [Placeholder description for fourth 3D printing project]`,
     technologies: ['3D Printing', 'CAD Design', 'Additive Manufacturing', 'Product Design'],
-    image: '/images/3d_printing_placeholder.png',
+    image: '/images/final_controls.png',
     images: [
       '/images/3d_printing_placeholder.png',
       '/images/3d_printing_project1_placeholder.png',
       '/images/3d_printing_project2_placeholder.png',
       '/images/3d_printing_project3_placeholder.png',
       '/images/3d_printing_project4_placeholder.png',
+      '/images/final_controls.png',
     ],
   },
 ];

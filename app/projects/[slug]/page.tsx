@@ -5,6 +5,78 @@ import { getProjectBySlug, getAllProjectSlugs } from '@/lib/projects';
 import ImageGallery from '@/components/ImageGallery';
 import ProjectStructure from '@/components/ProjectStructure';
 
+// Helper function to parse markdown-style links [text](url) and render as Link components
+function parseLinks(text: string): React.ReactNode {
+  if (!text || typeof text !== 'string') {
+    return <>{text}</>;
+  }
+
+  // Use matchAll to avoid issues with global regex
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const matches = Array.from(text.matchAll(linkRegex));
+  
+  // If no links found, return the original text wrapped in fragment
+  if (matches.length === 0) {
+    return <>{text}</>;
+  }
+
+  const parts: (string | { text: string; href: string; isExternal: boolean })[] = [];
+  let lastIndex = 0;
+
+  matches.forEach((match) => {
+    if (match.index === undefined) return;
+    
+    // Add text before the link
+    if (match.index > lastIndex) {
+      parts.push(text.substring(lastIndex, match.index));
+    }
+    // Add the link - check if it's external (starts with http:// or https://)
+    const href = match[2];
+    const isExternal = href.startsWith('http://') || href.startsWith('https://');
+    parts.push({ text: match[1], href, isExternal });
+    lastIndex = match.index + match[0].length;
+  });
+
+  // Add remaining text
+  if (lastIndex < text.length) {
+    parts.push(text.substring(lastIndex));
+  }
+
+  // Render parts with links
+  return (
+    <>
+      {parts.map((part, index) => {
+        if (typeof part === 'string') {
+          return <span key={index}>{part}</span>;
+        }
+        // Use regular <a> tag for external links, Next.js Link for internal links
+        if (part.isExternal) {
+          return (
+            <a
+              key={index}
+              href={part.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:text-blue-800 underline dark:text-blue-400 dark:hover:text-blue-300 font-normal"
+            >
+              {part.text}
+            </a>
+          );
+        }
+        return (
+          <Link
+            key={index}
+            href={part.href}
+            className="text-blue-600 hover:text-blue-800 underline dark:text-blue-400 dark:hover:text-blue-300 font-normal"
+          >
+            {part.text}
+          </Link>
+        );
+      })}
+    </>
+  );
+}
+
 interface ProjectPageProps {
   params: Promise<{ slug: string }>;
 }
@@ -144,13 +216,14 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 const [heading, ...rest] = paragraph.split(':');
                 
                 if (isHeading && rest.length > 0) {
+                  const content = rest.join(':').trim();
                   return (
                     <div key={index} className="space-y-2">
                       <h3 className="text-xl font-semibold text-gray-900 dark:text-white mt-6 mb-2">
                         {heading.trim()}
                       </h3>
-                      <div className="text-lg leading-8 whitespace-pre-line">
-                        {rest.join(':').trim()}
+                      <div className="text-lg leading-8 whitespace-pre-line font-normal">
+                        {parseLinks(content)}
                       </div>
                     </div>
                   );
@@ -165,7 +238,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   return (
                     <div key={index} className="space-y-2">
                       {beforeList && (
-                        <p className="text-lg leading-8">{beforeList.trim()}</p>
+                        <p className="text-lg leading-8 font-normal">{parseLinks(beforeList.trim())}</p>
                       )}
                       <ul className="list-disc list-inside space-y-1 text-lg leading-8 ml-4">
                         {listItems.map((item, itemIndex) => (
@@ -178,9 +251,9 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                 
                 // Regular paragraph
                 return (
-                  <p key={index} className="text-lg leading-8 whitespace-pre-line">
-                    {paragraph}
-                  </p>
+                  <div key={index} className="text-lg leading-8 font-normal">
+                    {parseLinks(paragraph)}
+                  </div>
                 );
               })}
               {project.slug === 'neon-escape' && (
@@ -231,7 +304,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
         )}
 
         {/* Links/Buttons */}
-        {(project.githubUrl || project.liveUrl) && (
+        {(project.githubUrl || project.liveUrl || project.deejUrl) && (
           <div className="mt-8 flex flex-wrap gap-4">
             {project.githubUrl && (
               <a
@@ -275,6 +348,28 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
                   />
                 </svg>
                 Live Demo
+              </a>
+            )}
+            {project.deejUrl && (
+              <a
+                id="deej-repository"
+                href={project.deejUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="deej-repository inline-flex items-center gap-2 rounded-md bg-gray-900 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-gray-800 hover:shadow-md hover:scale-105 dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100"
+              >
+                <svg
+                  className="h-5 w-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                Deej Repository
               </a>
             )}
           </div>

@@ -9,6 +9,7 @@ export interface Project {
   technologies: string[];
   githubUrl?: string;
   liveUrl?: string;
+  deejUrl?: string;
   featured?: boolean;
 }
 
