@@ -39,7 +39,7 @@ export default function EducationPage() {
                   width={40}
                   height={40}
                   className="h-10 w-auto object-contain"
-                  quality={85}
+                  quality={90}
                 />
                 <a
                   href="https://www.tum.de/en/"
@@ -57,7 +57,7 @@ export default function EducationPage() {
                   width={40}
                   height={40}
                   className="h-10 w-auto object-contain"
-                  quality={85}
+                  quality={90}
                 />
                 <a
                   href="https://www.lmu.de/en/"

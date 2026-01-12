@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     // The Image component will still work, but won't use Next.js optimization API
     // Images will be served directly from the public folder
     unoptimized: true,
+    // Configure allowed image qualities
+    qualities: [90],
     // Note: Image optimization features (AVIF, WebP conversion) require a server
     // For static export, images are served as-is from the public directory
     // If you need external images in the future, add them here:

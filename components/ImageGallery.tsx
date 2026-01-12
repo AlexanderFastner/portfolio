@@ -30,7 +30,7 @@ export default function ImageGallery({
               fill
               className="object-contain transition-transform duration-300 hover:scale-105 cursor-pointer p-2"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              quality={85}
+              quality={90}
               loading={index < 3 ? 'eager' : 'lazy'}
             />
           </div>
