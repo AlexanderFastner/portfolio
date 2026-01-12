@@ -3,10 +3,10 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Alexander Fastner",
   description: "Learn about Alexander Fastner - a bioinformatics researcher and software developer passionate about building innovative solutions at the intersection of coding and biology.",
   openGraph: {
-    title: "About | Alexander Fastner",
+    title: "Alexander Fastner",
     description: "Learn about Alexander Fastner - a bioinformatics researcher and software developer passionate about building innovative solutions.",
     url: "https://portfolio-3fef6.web.app",
     images: [

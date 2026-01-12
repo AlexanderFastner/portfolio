@@ -245,9 +245,9 @@ In the end we find that the protein embeddings alone with minimal training, even
     title: 'Neon Escape',
     description:
       'A Flutter-based mobile game inspired by Two Cars, featuring a neon-themed endless runner where players control two cars simultaneously to avoid obstacles and collect power-ups.',
+    liveUrl: 'https://neon-escape-84566.web.app/',
     longDescription:
       `Neon Escape is a cross-platform mobile game built with Flutter, inspired by the classic Two Cars game. The game features a sleek neon-themed aesthetic with smooth gameplay mechanics.
-
 Gameplay:
 Players control two cars simultaneously - one on the left side and one on the right side of the screen. The objective is to navigate through obstacles by switching lanes, collecting power-ups (stars), and achieving the highest score possible. The game includes multiple difficulty levels and tracks high scores locally.
 
@@ -265,7 +265,7 @@ The game is built using Flutter and Dart, with a clean architecture separating s
 
 The game can be deployed to multiple platforms, with Firebase Hosting configured for web deployment.`,
     technologies: ['Flutter', 'Dart', 'Mobile Development', 'Game Development', 'Firebase', 'Cross-platform'],
-    image: '/images/neon_escape_icon.png',
+    image: '/images/two_cars.png',
   },
   {
     slug: '3d-printing',
