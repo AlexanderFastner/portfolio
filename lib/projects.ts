@@ -10,7 +10,6 @@ export function getAllProjectSlugs(): string[] {
   return projects.map((project) => project.slug);
 }
 
-// Sample projects data - replace with your actual projects
 export const projects: Project[] = [
   {
     slug: 'rosalind-challenges',
@@ -29,37 +28,6 @@ The project covers many bioinformatics topics including Alignment, Combinatorics
     githubUrl: 'https://github.com/AlexanderFastner/Rosalind',
     liveUrl: 'https://rosalind.info/users/Alex.Fastner/',
     image: '/images/Rosalind_logo.png',
-    featured: true,
-  },
-  {
-    slug: 'bachelors-thesis',
-    title: "Bachelor's Thesis: Search for evidence of recombination in Alternaria solani",
-    description:
-      'Bioinformatics analysis investigating genetic recombination in the fungal pathogen Alternaria solani using genomic tools (ClonalFrameML and LDHelmet) to understand its reproductive biology.',
-    longDescription:
-      `Alternaria solani is a fungal pathogen responsible for early blight in tomatoes and potatoes, two globally important crops. The disease typically begins as small, dark lesions with characteristic concentric rings on older leaves, but can spread to stems and fruit, causing significant defoliation and yield loss. As a necrotrophic pathogen, A. solani kills host tissue and feeds on the resulting dead material. Notably, it reproduces asexually via conidia and has no known sexual stage, although some genetic evidence suggests recombination may occur.
-
-Fungicides, particularly succinate dehydrogenase inhibitors (SDHIs), are commonly used to manage early blight. However, resistance to these fungicides is emerging, with highly resistant strains now reported in parts of Europe. This resistance appears to have developed independently in different regions, hinting at possible genetic recombination within the pathogen population.
-
-To investigate this, I analyzed 48 A. solani samples from various European regions and the United States using recombination detection tools ClonalFrameML and LDHelmet. These tools help assess whether genetic exchange occurs, which is important for designing robust, cost-effective integrated pest management strategies. Understanding the pathogen's reproductive biology can inform how we approach disease control, especially as resistance to chemical controls grows.
-
-ClonalFrameML:
-ClonalFrameML is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
-
-LDHelmet:
-LDHelmet is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
-
-The results from LDHelmet showed 14 regions that show evidence of recombination, many of which upon visual inspection line up with results from ClonalFrameML. This work was continued as a research assistant for Prof. Stam at the Phytopathology chair at TUM and also later at Kiel University.`,
-    technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
-    githubUrl: 'https://github.com/AlexanderFastner/Alternaria-Solani-Recombination',
-    image: '/images/alternaria_solani.jpg',
-    images: [
-      '/images/alternaria_solani.jpg',
-      '/images/bachelor_map.png',
-      '/images/bachelor_chr1_clonalframeml.png',
-      '/images/bachelor_chr7_LDhelmet.png',
-      '/images/bachelor_chr1_comparison.png',
-    ],
     featured: true,
   },
   {
@@ -188,6 +156,37 @@ In the end we find that the protein embeddings alone with minimal training, even
     ],
   },
   {
+    slug: 'bachelors-thesis',
+    title: "Bachelor's Thesis: Search for evidence of recombination in Alternaria solani",
+    description:
+      'Bioinformatics analysis investigating genetic recombination in the fungal pathogen Alternaria solani using genomic tools (ClonalFrameML and LDHelmet) to understand its reproductive biology.',
+    longDescription:
+      `Alternaria solani is a fungal pathogen responsible for early blight in tomatoes and potatoes, two globally important crops. The disease typically begins as small, dark lesions with characteristic concentric rings on older leaves, but can spread to stems and fruit, causing significant defoliation and yield loss. As a necrotrophic pathogen, A. solani kills host tissue and feeds on the resulting dead material. Notably, it reproduces asexually via conidia and has no known sexual stage, although some genetic evidence suggests recombination may occur.
+
+Fungicides, particularly succinate dehydrogenase inhibitors (SDHIs), are commonly used to manage early blight. However, resistance to these fungicides is emerging, with highly resistant strains now reported in parts of Europe. This resistance appears to have developed independently in different regions, hinting at possible genetic recombination within the pathogen population.
+
+To investigate this, I analyzed 48 A. solani samples from various European regions and the United States using recombination detection tools ClonalFrameML and LDHelmet. These tools help assess whether genetic exchange occurs, which is important for designing robust, cost-effective integrated pest management strategies. Understanding the pathogen's reproductive biology can inform how we approach disease control, especially as resistance to chemical controls grows.
+
+ClonalFrameML:
+ClonalFrameML is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
+
+LDHelmet:
+LDHelmet is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
+
+The results from LDHelmet showed 14 regions that show evidence of recombination, many of which upon visual inspection line up with results from ClonalFrameML. This work was continued as a research assistant for Prof. Stam at the Phytopathology chair at TUM and also later at Kiel University.`,
+    technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
+    githubUrl: 'https://github.com/AlexanderFastner/Alternaria-Solani-Recombination',
+    image: '/images/alternaria_solani.jpg',
+    images: [
+      '/images/alternaria_solani.jpg',
+      '/images/bachelor_map.png',
+      '/images/bachelor_chr1_clonalframeml.png',
+      '/images/bachelor_chr7_LDhelmet.png',
+      '/images/bachelor_chr1_comparison.png',
+    ],
+    featured: true,
+  },
+  {
     slug: 'machine-strike',
     title: 'Machine Strike: Android Game',
     description:
@@ -214,13 +213,21 @@ In the end we find that the protein embeddings alone with minimal training, even
     ],
   },
   {
-    slug: 'raspberry-pi-web-hosting',
-    title: 'Raspberry Pi Web Hosting',
+    slug: 'reverse-proxy-networking',
+    title: 'Raspi Reverse Proxy + Minecraft server',
     description:
-      'Setting up a Raspberry Pi as a web host, learning about Linux OS, networking, security, and port forwarding to host personal projects and services.',
+      'Setting up a Raspberry Pi as a reverse proxy. The first of many use cases I have in mind was a minecraft server for me and my friends. This involved networking, Linux OS, security, cron jobs, systemd services, and port forwarding.',
     longDescription:
-      `The versatile Raspberry Pi has become another favorite platform for my experiments. Most recently I wanted to set it up as a web host for this site. Figuring out the ins and outs of the OS as well as setting up networking, security and port forwarding was quite the interesting challenge. From this I learned some valuable skills that I can continue to use for various projects in the future.`,
-    technologies: ['Raspberry Pi', 'Linux', 'Networking', 'System Administration', 'Security'],
+      `The versatile Raspberry Pi has become another favorite platform for my experiments. Most recently I set it up as a reverse proxy to allow controlled and secure external access to my network and to a minecraft server running on my laptop. Figuring out the ins and outs of the raspi OS and fedora linux on my laptop was a challenging start. Then I learned to setup the correct networking, firewall setup and set port forwarding rules. 
+		After I had set up the minecraft server for testing, I went on to setup a heartbeat server to be able to externally test availability. 
+		With the server up and running I also spent some time setting up systemd services/cron jobs on both my Raspi and my laptop for automated scripts to run on startup, auto restart, and logging to an external server.
+		I consistently log the availability of the services on a monitoring site I build and host externally.
+		From this I learned some valuable skills about networking that I will  continue to use for various projects I have planned in the future.`,
+    technologies: ['Raspberry Pi', 'Linux', 'Networking', 'System Administration', 'Security', 'scripting'],
+    image: '/images/monitoring_reverse_proxy.png',
+    images: [
+      '/images/raspi_reverse_proxy.png',
+    ],
   },
   {
     slug: 'othello',
@@ -228,8 +235,12 @@ In the end we find that the protein embeddings alone with minimal training, even
     description:
       'A recreation of the classic Othello (Reversi) board game, developed as a personal project to practice game development and algorithm implementation.',
     longDescription:
-      `Othello, also known as Reversi, is a classic strategy board game. This project involves recreating the game with proper game logic, move validation, and potentially AI opponents. The game features the classic 8x8 board where players take turns placing discs and flipping opponent pieces. This project allows me to practice game development, algorithm design, and user interface implementation.`,
-    technologies: ['Game Development', 'Algorithms', 'UI/UX'],
+      `Othello, also known as Reversi, is a classic strategy board game. This project involves recreating the game with proper game logic, move validation, and AI opponents. The game features the classic 8x8 board where players take turns placing discs and flipping opponent pieces. This project was part of the 3rd Semester Programming Seminar (ProPra) and allowed me to practice basiic game development, algorithm design, and very basic user interface implementation.`,
+    technologies: ['Game Development', 'Algorithms', 'UI/UX', 'Java'],
+    image: '/images/othello_game.png',
+    images: [
+      '/images/cli_othello.png',
+    ],
   },
   {
     slug: 'spongedb-v2',
