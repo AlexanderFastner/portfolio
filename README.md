@@ -26,7 +26,7 @@ portfolio/
 │   ├── Navigation.tsx    # Main navigation
 │   ├── ProjectCard.tsx    # Project card component
 │   ├── ImageGallery.tsx   # Image gallery component
-│   └── PageLayout.tsx     # Page layout wrapper
+│   └── ProjectStructure.tsx # Project structure display
 ├── lib/                   # Utility functions
 │   ├── projects.ts        # Project data
 │   └── types.ts           # TypeScript types
