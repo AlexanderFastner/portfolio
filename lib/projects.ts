@@ -156,102 +156,6 @@ In the end we find that the protein embeddings alone with minimal training, even
     ],
   },
   {
-    slug: 'bachelors-thesis',
-    title: "Bachelor's Thesis: Search for evidence of recombination in Alternaria solani",
-    description:
-      'Bioinformatics analysis investigating genetic recombination in the fungal pathogen Alternaria solani using genomic tools (ClonalFrameML and LDHelmet) to understand its reproductive biology.',
-    longDescription:
-      `Alternaria solani is a fungal pathogen responsible for early blight in tomatoes and potatoes, two globally important crops. The disease typically begins as small, dark lesions with characteristic concentric rings on older leaves, but can spread to stems and fruit, causing significant defoliation and yield loss. As a necrotrophic pathogen, A. solani kills host tissue and feeds on the resulting dead material. Notably, it reproduces asexually via conidia and has no known sexual stage, although some genetic evidence suggests recombination may occur.
-
-Fungicides, particularly succinate dehydrogenase inhibitors (SDHIs), are commonly used to manage early blight. However, resistance to these fungicides is emerging, with highly resistant strains now reported in parts of Europe. This resistance appears to have developed independently in different regions, hinting at possible genetic recombination within the pathogen population.
-
-To investigate this, I analyzed 48 A. solani samples from various European regions and the United States using recombination detection tools ClonalFrameML and LDHelmet. These tools help assess whether genetic exchange occurs, which is important for designing robust, cost-effective integrated pest management strategies. Understanding the pathogen's reproductive biology can inform how we approach disease control, especially as resistance to chemical controls grows.
-
-ClonalFrameML:
-ClonalFrameML is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
-
-LDHelmet:
-LDHelmet is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
-
-The results from LDHelmet showed 14 regions that show evidence of recombination, many of which upon visual inspection line up with results from ClonalFrameML. This work was continued as a research assistant for Prof. Stam at the Phytopathology chair at TUM and also later at Kiel University.`,
-    technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
-    githubUrl: 'https://github.com/AlexanderFastner/Alternaria-Solani-Recombination',
-    image: '/images/alternaria_solani.jpg',
-    images: [
-      '/images/alternaria_solani.jpg',
-      '/images/bachelor_map.png',
-      '/images/bachelor_chr1_clonalframeml.png',
-      '/images/bachelor_chr7_LDhelmet.png',
-      '/images/bachelor_chr1_comparison.png',
-    ],
-    featured: true,
-  },
-  {
-    slug: 'machine-strike',
-    title: 'Machine Strike: Android Game',
-    description:
-      'A mobile version of the board strategy game Machine Strike, similar to chess, developed in Kotlin for Android as a personal project to practice app development skills.',
-    longDescription:
-      `Machine Strike is a board strategy game similar to chess. I took an Android development course and began designing a mobile version of this game. I continuously work on it in my free time getting it closer and closer to a playable version. This project allows me to practice my Android development skills and game design principles.`,
-    technologies: ['Kotlin', 'Android', 'Game Development', 'Mobile Development'],
-    githubUrl: 'https://github.com/AlexanderFastner/Machine_Strike',
-  },
-  {
-    slug: 'arduino-volume-control',
-    title: 'Arduino Physical Volume Control',
-    description:
-      'A 3d-printed and soldered, physical volume control for PC that is controlled by an Arduino running the open source software Deej.',
-    longDescription:
-      `This project details the development of a custom, tactile volume control for my PC using an Arduino. I designed and constructed the hardware, including soldering the necessary components and designing a custom enclosure. The Arduino software reads input from a rotary potentiometer and uses serial communication to control the system volume on my computer. I utilized software from the open source project Deej to achieve this. This project provided valuable experience in 3d Printing and Soldering.`,
-    deejUrl: 'https://github.com/omriharel/deej',
-    technologies: ['Arduino', 'Soldering', '3D Printing', 'Hardware', 'Electronics', 'Deej'],
-    image: '/images/final_controls.png',
-    images: [
-      '/images/soldering.png',
-      '/images/assembly.png',
-      '/images/final_controls.png',
-    ],
-  },
-  {
-    slug: 'reverse-proxy-networking',
-    title: 'Raspi Reverse Proxy + Minecraft server',
-    description:
-      'Setting up a Raspberry Pi as a reverse proxy. The first of many use cases I have in mind was a minecraft server for me and my friends. This involved networking, Linux OS, security, cron jobs, systemd services, and port forwarding.',
-    longDescription:
-      `The versatile Raspberry Pi has become another favorite platform for my experiments. Most recently I set it up as a reverse proxy to allow controlled and secure external access to my network and to a minecraft server running on my laptop. Figuring out the ins and outs of the raspi OS and fedora linux on my laptop was a challenging start. Then I learned to setup the correct networking, firewall setup and set port forwarding rules. 
-		After I had set up the minecraft server for testing, I went on to setup a heartbeat server to be able to externally test availability. 
-		With the server up and running I also spent some time setting up systemd services/cron jobs on both my Raspi and my laptop for automated scripts to run on startup, auto restart, and logging to an external server.
-		I consistently log the availability of the services on a monitoring site I build and host externally.
-		From this I learned some valuable skills about networking that I will  continue to use for various projects I have planned in the future.`,
-    technologies: ['Raspberry Pi', 'Linux', 'Networking', 'System Administration', 'Security', 'scripting'],
-    image: '/images/monitoring_reverse_proxy.png',
-    images: [
-      '/images/raspi_reverse_proxy.png',
-    ],
-  },
-  {
-    slug: 'othello',
-    title: 'Othello Game',
-    description:
-      'A recreation of the classic Othello (Reversi) board game, developed as a personal project to practice game development and algorithm implementation.',
-    longDescription:
-      `Othello, also known as Reversi, is a classic strategy board game. This project involves recreating the game with proper game logic, move validation, and AI opponents. The game features the classic 8x8 board where players take turns placing discs and flipping opponent pieces. This project was part of the 3rd Semester Programming Seminar (ProPra) and allowed me to practice basiic game development, algorithm design, and very basic user interface implementation.`,
-    technologies: ['Game Development', 'Algorithms', 'UI/UX', 'Java'],
-    image: '/images/othello_game.png',
-    images: [
-      '/images/cli_othello.png',
-    ],
-  },
-  {
-    slug: 'spongedb-v2',
-    title: 'SpongeDB v2',
-    description:
-      'An updated version of a database project, building upon previous work to create an improved data management and query system.',
-    longDescription:
-      `SpongeDB v2 is an updated version of a database project. This project involves building and improving upon database functionality, query systems, and data management capabilities. The version 2 indicates significant improvements and new features over the original implementation.`,
-    technologies: ['Database', 'Data Management', 'Backend Development'],
-  },
-  {
     slug: 'neon-escape',
     title: 'Neon Escape',
     description:
@@ -290,23 +194,108 @@ Project 1:
 A custom 3D-printed enclosure for the [Arduino Physical Volume Control](/projects/arduino-volume-control) project, designed to house the electronics and provide a professional finish.
 
 Project 2:
-[Placeholder description for second 3D printing project]
+A model of DNA strands with different base pairs.
 
 Project 3:
-[Placeholder description for third 3D printing project]
+A diorama of the google dinosaur game.
 
 Project 4:
 [Placeholder description for fourth 3D printing project]`,
     technologies: ['3D Printing', 'CAD Design', 'Additive Manufacturing', 'Product Design'],
+    image:'/images/dna_3d_print.jpg',
+    images: [
+      '/images/final_controls.png',
+      '/images/dna_3d_print.jpg',
+      '/images/google_dino.jpg',
+      '/images/3d_printing_project4_placeholder.png',
+    ],
+  },
+  {
+    slug: 'bachelors-thesis',
+    title: "Bachelor's Thesis: Search for evidence of recombination in Alternaria solani",
+    description:
+      'Bioinformatics analysis investigating genetic recombination in the fungal pathogen Alternaria solani using genomic tools (ClonalFrameML and LDHelmet) to understand its reproductive biology.',
+    longDescription:
+      `Alternaria solani is a fungal pathogen responsible for early blight in tomatoes and potatoes, two globally important crops. The disease typically begins as small, dark lesions with characteristic concentric rings on older leaves, but can spread to stems and fruit, causing significant defoliation and yield loss. As a necrotrophic pathogen, A. solani kills host tissue and feeds on the resulting dead material. Notably, it reproduces asexually via conidia and has no known sexual stage, although some genetic evidence suggests recombination may occur.
+
+Fungicides, particularly succinate dehydrogenase inhibitors (SDHIs), are commonly used to manage early blight. However, resistance to these fungicides is emerging, with highly resistant strains now reported in parts of Europe. This resistance appears to have developed independently in different regions, hinting at possible genetic recombination within the pathogen population.
+
+To investigate this, I analyzed 48 A. solani samples from various European regions and the United States using recombination detection tools ClonalFrameML and LDHelmet. These tools help assess whether genetic exchange occurs, which is important for designing robust, cost-effective integrated pest management strategies. Understanding the pathogen's reproductive biology can inform how we approach disease control, especially as resistance to chemical controls grows.
+
+ClonalFrameML:
+ClonalFrameML is a maximum likelihood-based software tool designed for detecting and quantifying recombination events in bacterial genomes. It analyzes aligned whole-genome sequence data to reconstruct phylogenies that account for recombination, estimate key recombination parameters, and map where recombination has occurred across the genome.
+
+LDHelmet:
+LDHelmet is a statistical tool used to infer fine-scale crossover recombination rates from population genetic data, particularly from phased and aligned DNA sequences. It uses advanced population genetic models and Markov Chain Monte Carlo (MCMC) methods to generate detailed recombination maps, identifying recombination hotspots with high accuracy.
+
+The results from LDHelmet showed 14 regions that show evidence of recombination, many of which upon visual inspection line up with results from ClonalFrameML. This work was continued as a research assistant for Prof. Stam at the Phytopathology chair at TUM and also later at Kiel University.`,
+    technologies: ['Python', 'R', 'Bash', 'ClonalFrameML', 'LDHelmet', 'Bioinformatics', 'Genomics'],
+    githubUrl: 'https://github.com/AlexanderFastner/Alternaria-Solani-Recombination',
+    image: '/images/alternaria_solani.jpg',
+    images: [
+      '/images/alternaria_solani.jpg',
+      '/images/bachelor_map.png',
+      '/images/bachelor_chr1_clonalframeml.png',
+      '/images/bachelor_chr7_LDhelmet.png',
+      '/images/bachelor_chr1_comparison.png',
+    ],
+    featured: true,
+  },
+  {
+    slug: 'reverse-proxy-networking',
+    title: 'Raspi Reverse Proxy + Minecraft server',
+    description:
+      'Setting up a Raspberry Pi as a reverse proxy. The first of many use cases I have in mind was a minecraft server for me and my friends. This involved networking, Linux OS, security, cron jobs, systemd services, and port forwarding.',
+    longDescription:
+      `The versatile Raspberry Pi has become another favorite platform for my experiments. Most recently I set it up as a reverse proxy to allow controlled and secure external access to my network and to a minecraft server running on my laptop. Figuring out the ins and outs of the raspi OS and fedora linux on my laptop was a challenging start. Then I learned to setup the correct networking, firewall setup and set port forwarding rules. 
+		After I had set up the minecraft server for testing, I went on to setup a heartbeat server to be able to externally test availability. 
+		With the server up and running I also spent some time setting up systemd services/cron jobs on both my Raspi and my laptop for automated scripts to run on startup, auto restart, and logging to an external server.
+		I consistently log the availability of the services on a monitoring site I build and host externally.
+		From this I learned some valuable skills about networking that I will  continue to use for various projects I have planned in the future.`,
+    technologies: ['Raspberry Pi', 'Linux', 'Networking', 'System Administration', 'Security', 'scripting'],
+    image: '/images/monitoring_reverse_proxy.png',
+    images: [
+      '/images/raspi_reverse_proxy.png',
+    ],
+  },
+  {
+    slug: 'othello',
+    title: 'Othello Game',
+    description:
+      'A recreation of the classic Othello (Reversi) board game, developed as a personal project to practice game development and algorithm implementation.',
+    longDescription:
+      `Othello, also known as Reversi, is a classic strategy board game. This project involves recreating the game with proper game logic, move validation, and AI opponents. The game features the classic 8x8 board where players take turns placing discs and flipping opponent pieces. This project was part of the 3rd Semester Programming Seminar (ProPra) and allowed me to practice basiic game development, algorithm design, and very basic user interface implementation.`,
+    technologies: ['Game Development', 'Algorithms', 'UI/UX', 'Java'],
+    image: '/images/othello_game.png',
+    images: [
+      '/images/cli_othello.png',
+    ],
+  },
+  {
+    slug: 'arduino-volume-control',
+    title: 'Arduino Physical Volume Control',
+    description:
+      'A 3d-printed and soldered, physical volume control for PC that is controlled by an Arduino running the open source software Deej.',
+    longDescription:
+      `This project details the development of a custom, tactile volume control for my PC using an Arduino. I designed and constructed the hardware, including soldering the necessary components and designing a custom enclosure. The Arduino software reads input from a rotary potentiometer and uses serial communication to control the system volume on my computer. I utilized software from the open source project Deej to achieve this. This project provided valuable experience in 3d Printing and Soldering.`,
+    deejUrl: 'https://github.com/omriharel/deej',
+    technologies: ['Arduino', 'Soldering', '3D Printing', 'Hardware', 'Electronics', 'Deej'],
     image: '/images/final_controls.png',
     images: [
-      '/images/3d_printing_placeholder.png',
-      '/images/3d_printing_project1_placeholder.png',
-      '/images/3d_printing_project2_placeholder.png',
-      '/images/3d_printing_project3_placeholder.png',
-      '/images/3d_printing_project4_placeholder.png',
+      '/images/soldering.png',
+      '/images/assembly.png',
       '/images/final_controls.png',
     ],
+  },
+  {
+    slug: 'machine-strike',
+    title: 'Machine Strike: Android Game',
+    description:
+      'A mobile version of the board strategy game Machine Strike, similar to chess, developed in Kotlin for Android as a personal project to practice app development skills.',
+    longDescription:
+      `Machine Strike is a board strategy game similar to chess. I took an Android development course and began designing a mobile version of this game. I continuously work on it in my free time getting it closer and closer to a playable version. This project allows me to practice my Android development skills and game design principles.`,
+    technologies: ['Kotlin', 'Android', 'Game Development', 'Mobile Development'],
+    githubUrl: 'https://github.com/AlexanderFastner/Machine_Strike',
   },
 ];
 

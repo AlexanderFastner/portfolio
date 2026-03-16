@@ -3,6 +3,8 @@
 A modern, responsive portfolio website showcasing my work in bioinformatics, software development, and various tech projects. Built with Next.js and deployed on Firebase Hosting.
 
 🌐 **Live Site:** [portfolio-3fef6.web.app](https://portfolio-3fef6.web.app/)
+Also available at alexfastner.me
+
 
 ## 🛠️ Tech Stack
 
